@@ -1,0 +1,14 @@
+.headsection{
+    background-color: #004673;
+    color: white;
+    font-family: Poppins;
+    padding-top: 10px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    font-size: 15px;
+    padding-left: 10px;
+}
+.quick-menu{
+    list-style: none;
+
+}
