@@ -9,11 +9,20 @@ public class App {
         staticFileLocation("/public");
 
         get("/", (request, response) -> {
-            return new ModelAndView(new HashMap(), "hello.hbs");
+            return new ModelAndView(new HashMap(), "homepage.hbs");
         }, new HandlebarsTemplateEngine());
 
-//        get("/favorite_photos", (request, response) -> {
-//            return new ModelAndView(new HashMap(), "favorite_photos.hbs");
-//        }, new HandlebarsTemplateEngine());
+        get("/login", (request, response) -> {
+            return new ModelAndView(new HashMap(), "login.hbs");
+        }, new HandlebarsTemplateEngine());
+        get("/signup", (request, response) -> {
+            return new ModelAndView(new HashMap(), "signup.hbs");
+        }, new HandlebarsTemplateEngine());
+        get("/homepage", (request, response) -> {
+            return new ModelAndView(new HashMap(), "homepage.hbs");
+        }, new HandlebarsTemplateEngine());
+        get("/welcome", (request, response) -> {
+            return new ModelAndView(new HashMap(), "welcome.hbs");
+        }, new HandlebarsTemplateEngine());
     }
 }
