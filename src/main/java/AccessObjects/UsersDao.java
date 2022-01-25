@@ -16,6 +16,7 @@ public class UsersDao implements ConnectionUserInterface {
 
     @Override
     public void add(Users users) {
+        String sql="INSERT INTO user (description) VALUES (:descriptiom";
 
     }
 

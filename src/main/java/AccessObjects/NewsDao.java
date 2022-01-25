@@ -11,13 +11,13 @@ import java.util.List;
 public class NewsDao implements ConnnectionNewsInterface {
 
 
-    Sql2o sql2o;
+    static Sql2o sql2o;
 
     public NewsDao(Sql2o sql2o) {
         this.sql2o = sql2o;
     }
 
-    @Override
+//    @Override
     public static void add(News news) {
         String sql ="INSERT INTO news (description) VALUES (:descriptiom)";
         try (Connection conn= sql2o.open()){
@@ -29,7 +29,6 @@ public class NewsDao implements ConnnectionNewsInterface {
         }catch (Sql2oException sql2oException){
             sql2oException.printStackTrace();
         }
-
     }
 
     @Override
