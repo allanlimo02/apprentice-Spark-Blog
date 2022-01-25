@@ -1,0 +1,12 @@
+{{#partial "title"}}
+    Welcome Home
+{{/partial}}
+
+{{#partial "sessions"}}
+    <a href="/login"><button class="btn-danger fleft"> Log Out</button></a>
+{{/partial}}
+
+{{#partial "content"}}
+    <h4 style="color: #009688;">Welcome <span style="color: #96000e;">{{ username }}</span> </h4>
+{{/partial}}
+{{> layout.hbs}}
