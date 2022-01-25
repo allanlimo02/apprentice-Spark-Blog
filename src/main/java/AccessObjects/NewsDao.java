@@ -2,6 +2,8 @@ package AccessObjects;
 
 import AccessInterface.ConnnectionNewsInterface;
 import Models.News;
+import Models.Users;
+import org.h2.util.New;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
 import org.sql2o.Sql2oException;
@@ -12,6 +14,7 @@ public class NewsDao implements ConnnectionNewsInterface {
 
 
     static Sql2o sql2o;
+    Connection conn;
 
     public NewsDao(Sql2o sql2o) {
         this.sql2o = sql2o;
@@ -49,4 +52,16 @@ public class NewsDao implements ConnnectionNewsInterface {
                     .executeAndFetchFirst(News.class);
         }
     }
+
+    @Override
+    public void findByCategory(String category) {
+        String sql="SELECT * FROM news WHERE category=(:category)";
+        try (Connection conn=sql2o.open()){
+            conn.createQuery(sql)
+                    .executeAndFetchFirst(New.class);
+
+        }
+
+    }
+
 }

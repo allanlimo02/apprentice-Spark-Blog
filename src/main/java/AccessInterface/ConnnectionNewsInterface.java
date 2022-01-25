@@ -14,4 +14,7 @@ public interface ConnnectionNewsInterface {
     // READ
     News findById(int id);
 
+    //Find by category
+    void findByCategory(String category);
+
 }

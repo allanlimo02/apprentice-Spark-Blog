@@ -1,0 +1,48 @@
+{{#partial "title"}}
+    Welcome Home
+{{/partial}}
+
+{{#partial "sessions"}}
+    <a href="/login"><button class="btn-danger fleft"> Log Out</button></a>
+{{/partial}}
+
+{{#partial "content"}}
+    <h4 style="color: #009688;">Welcome <span style="color: #96000e;">{{ username }}.</span> </h4>
+    <div>
+        <div class="row">
+            <div class="col-md-3">
+                <h2 class="text-center">Latest News Updates</h2>
+                <ul>
+                    <a href=""><li>Gov't Agency Recovers Ksh.3.1 Million In Jacket Shipped To Kenya From The US</li></a>
+                    <a><li>Angella Okotuyi Makes History At Australian Open</li></a>
+                    <a><li>Three People Killed, 10 Injured After Matatu Collides With Lorry In Kiambu</li></a>
+                    <a><li>Kenya Lifts Ban On Inbound Flights From UAE, Outbound Flights Still Suspended</li></a>
+
+                    <li>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h2 class="text-center">Trending Topics</h2>
+
+                <ul>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h4 class="text-center">Sports Highlits </h4>
+                <ul>
+                    <li><a>Bandari To Bolster Attack -Mbungo</a></li>
+                    <li><a>Top Stars To Battle For 2021 SOYA Honours At Gala Night
+                    </a></li>
+                    <a><li>National Sevens Circuit Set For May Return After Two-Year Absence</li></a>
+                    <li><a>Angella Okotuyi Makes History At Australian Open</a></li>
+                    <li><a>Tsitsipas Battles To Win Five-Set Thriller</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+{{/partial}}
+{{> layout.hbs}}

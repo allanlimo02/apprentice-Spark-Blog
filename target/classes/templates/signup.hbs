@@ -1,0 +1,32 @@
+{{#partial "title"}}
+    Sign Up
+{{/partial}}
+{{#partial "content"}}
+    <div class="row" style="margin-top: 80px;">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <h2 class="text-center">Sign Up</h2>
+            <form action="/welcome">
+                <div class="mb-3">
+                    <label for="Inputusername" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp" required>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" required>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" required>
+                </div> <br><br>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <br>
+                <P><a href="/login">Already have an account? Log In</a></P>
+            </form>
+
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+{{/partial}}
+{{> layout.hbs}}
